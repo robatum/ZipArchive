@@ -443,10 +443,10 @@
         NSError * err = nil;
         for (NSDictionary * d in directoriesModificationDates) {
             if (![[NSFileManager defaultManager] setAttributes:@{NSFileModificationDate: d[@"modDate"]} ofItemAtPath:d[@"path"] error:&err]) {
-                NSLog(@"[SSZipArchive] Set attributes failed for directory: %@.", d[@"path"]);
+                //NSLog(@"[SSZipArchive] Set attributes failed for directory: %@.", d[@"path"]);
             }
             if (err) {
-                NSLog(@"[SSZipArchive] Error setting directory file modification date attribute: %@",err.localizedDescription);
+                //NSLog(@"[SSZipArchive] Error setting directory file modification date attribute: %@",err.localizedDescription);
             }
         }
 #if !__has_feature(objc_arc)
